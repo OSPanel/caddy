@@ -70,7 +70,6 @@ jobs:
             --with github.com/HeavyHorst/certmagic-nats `
             --with github.com/LeenHawk/caddy-edgeone-ip `
             --with github.com/LeenHawk/edgeone `
-            --with github.com/Lenart12/caddy-events-store_cert `
             --with github.com/PixyBlue/caddy-pixbooster `
             --with github.com/Scarsz/caddy-save `
             --with github.com/WeidiDeng/caddy-cloudflare-ip `
