@@ -41,7 +41,6 @@ jobs:
             --with github.com/AnswerDotAI/caddy-sqlite-router `
             --with github.com/BadAimWeeb/caddy-uwsgi-transport `
             --with github.com/BraveRoy/caddy-waf `
-            --with github.com/Boomchainlab/vite-react-template/caddy-plugin `
             --with github.com/Elegant996/scgi-transport `
             --with github.com/Enzonix-LLC/dns-caddy `
             --with github.com/Javex/caddy-fail2ban `
@@ -51,7 +50,6 @@ jobs:
             --with github.com/Lenart12/caddy-events-store_cert `
             --with github.com/PixyBlue/caddy-pixbooster `
             --with github.com/RussellLuo/caddy-ext/flagr `
-            --with github.com/RussellLuo/caddy-ext/layer4 `
             --with github.com/RussellLuo/caddy-ext/ratelimit `
             --with github.com/RussellLuo/caddy-ext/requestbodyvar `
             --with github.com/Scarsz/caddy-save `
