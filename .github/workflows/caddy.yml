@@ -66,7 +66,6 @@ jobs:
           xcaddy build ${{ github.event.inputs.caddy_version }} `
             --with github.com/BadAimWeeb/caddy-uwsgi-transport `
             --with github.com/Elegant996/scgi-transport `
-            --with github.com/Enzonix-LLC/dns-caddy `
             --with github.com/HeavyHorst/certmagic-nats `
             --with github.com/LeenHawk/caddy-edgeone-ip `
             --with github.com/LeenHawk/edgeone `
