@@ -227,3 +227,24 @@ jobs:
         with:
           name: caddy-custom-windows
           path: ./caddy.exe
+
+  release:
+    runs-on: windows-latest
+    needs: build
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: caddy-custom-windows
+          path: ./dist
+
+      # 6. Создание релиза
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.caddy_version }}
+          name: "Custom Caddy (Windows) ${{ github.event.inputs.caddy_version }}"
+          files: ./dist/caddy.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
