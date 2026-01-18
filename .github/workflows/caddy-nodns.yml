@@ -89,7 +89,6 @@ jobs:
             --with github.com/chukmunnlee/caddy-openapi `
             --with github.com/corazawaf/coraza-caddy/v2 `
             --with github.com/davidventura/caddy-certsrv `
-            --with github.com/deanchou/caddy_etcd `
             --with github.com/deanchou/caddy_ip_filter `
             --with github.com/devetek/caddyserver-minifier `
             --with github.com/digilolnet/caddy-bunny-ip `
@@ -114,7 +113,6 @@ jobs:
             --with github.com/greenpau/caddy-security `
             --with github.com/greenpau/caddy-trace `
             --with github.com/hslatman/caddy-openapi-validator `
-            --with github.com/imgk/caddy-trojan `
             --with github.com/immosquare/caddy-dns-immosquare `
             --with github.com/infogulch/xtemplate `
             --with github.com/jonaharagon/caddy-umami `
