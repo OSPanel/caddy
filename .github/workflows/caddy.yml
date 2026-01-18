@@ -184,7 +184,6 @@ jobs:
             --with github.com/pteich/caddy-tlsconsul `
             --with github.com/quix-labs/caddy-pfx-certificates `
             --with github.com/sablierapp/sablier-caddy-plugin `
-            --with github.com/sablierapp/sablier/plugins/caddy `
             --with github.com/sagikazarmark/caddy-fs-s3 `
             --with github.com/sagikazarmark/caddy-k8s-admission `
             --with github.com/sandstorm/caddy-nats-bridge `
