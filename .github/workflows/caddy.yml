@@ -148,7 +148,6 @@ jobs:
             --with github.com/jaredfolkins/llmon `
             --with github.com/jonaharagon/caddy-umami `
             --with github.com/jpillora/ipfilter-caddy `
-            --with github.com/kadeessh/kadeessh `
             --with github.com/kassner/caddy-trapdoor `
             --with github.com/kirsch33/realip `
             --with github.com/lanrat/caddy-dynamic-remoteip `
