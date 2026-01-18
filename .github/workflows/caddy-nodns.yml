@@ -157,7 +157,6 @@ jobs:
             --with github.com/steffenbusch/caddy-basicauth-totp `
             --with github.com/steffenbusch/caddy-bot-barrier `
             --with github.com/steffenbusch/caddy-cron-matcher `
-            --with github.com/steffenbusch/caddy-extra-placeholders `
             --with github.com/steffenbusch/caddy-i18n-template-ext `
             --with github.com/steffenbusch/caddy-jwt-issuer `
             --with github.com/steffenbusch/caddy-placeholder-dump `
