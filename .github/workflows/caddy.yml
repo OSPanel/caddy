@@ -126,7 +126,6 @@ jobs:
             --with github.com/caddy-dns/transip `
             --with github.com/caddy-dns/vercel `
             --with github.com/caddy-dns/vultr `
-            --with github.com/caddy-dns01proxy `
             --with github.com/caddyserver/cache-handler `
             --with github.com/caddyserver/forwardproxy `
             --with github.com/caddyserver/jsonc-adapter `
