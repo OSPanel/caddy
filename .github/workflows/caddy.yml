@@ -1,6 +1,9 @@
 name: Build Custom Caddy (Windows)
 
 on:
+  push:
+    paths: 
+       - ".github/workflows/**"
   workflow_dispatch:
     inputs:
       caddy_version:
@@ -219,7 +222,6 @@ jobs:
             --with github.com/sagikazarmark/caddy-fs-s3 `
             --with github.com/sagikazarmark/caddy-k8s-admission `
             --with github.com/sandstorm/caddy-nats-bridge `
-            --with github.com/scionproto-contrib/caddy-scion `
             --with github.com/sebdroid/cookiecrypt `
             --with github.com/shift72/caddy-geo-ip `
             --with github.com/sillygod/cdp-cache `
