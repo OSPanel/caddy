@@ -235,20 +235,15 @@ jobs:
           name: caddy-${{ github.event.inputs.caddy_version }}
           path: ./caddy.exe
 
-      - name: Generate release tag
-        id: gen_tag
-        shell: pwsh
-        run: |
-          echo "tag=${{ github.event.inputs.caddy_version }}" >> $env:GITHUB_OUTPUT
-
+      # 6. Создание GitHub Release
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.gen_tag.outputs.tag }}
+          tag_name: ${{ github.event.inputs.caddy_version }}
           body: "Release ${{ github.event.inputs.caddy_version }}"
           files: ./caddy.exe
 
+      # 7. Очистка
       - name: Cleanup
         shell: pwsh
         run: Remove-Item ./caddy.exe -Force
-
