@@ -262,7 +262,6 @@ jobs:
             --with github.com/zhangjiayin/caddy-mysql-adapter `
             --with go.akpain.net/caddy-tailscale-auth `
             --with go.hackfix.me/caddy-paseto `
-            --with magnax.ca/caddy/gopkg `
             --with pkg.jsn.cam/caddy-defender `
             --with willnorris.com/go/imageproxy/caddy `      
 
