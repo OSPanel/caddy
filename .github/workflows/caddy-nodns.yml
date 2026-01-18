@@ -128,7 +128,6 @@ jobs:
             --with github.com/mkalus/caddy_block_aws `
             --with github.com/mkalus/caddy_nobots_v2 `
             --with github.com/mohammed90/caddy-aws-transport `
-            --with github.com/mohammed90/caddy-encrypted-storage `
             --with github.com/mohammed90/caddy-git-fs `
             --with github.com/mohammed90/caddy-ngrok-listener `
             --with github.com/mohammed90/caddy-pocketbase `
