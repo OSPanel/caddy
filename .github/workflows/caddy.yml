@@ -55,7 +55,6 @@ jobs:
             --with github.com/abiosoft/caddy-inspect `
             --with github.com/abiosoft/caddy-json-parse `
             --with github.com/abiosoft/caddy-json-schema `
-            --with github.com/abiosoft/caddy-named-routes `
             --with github.com/aksdb/caddy-cgi/v2 `
             --with github.com/anthemaker/caddy-dns-fetcher `
             --with github.com/anthemaker/caddy-signed-urls `
@@ -109,7 +108,6 @@ jobs:
             --with github.com/caddy-dns/ionos `
             --with github.com/caddyserver/cache-handler `
             --with github.com/caddyserver/forwardproxy `
-            --with github.com/caddyserver/jsonc-adapter `
             --with github.com/caddyserver/ntlm-transport `
             --with github.com/caddyserver/replace-response `
             --with github.com/caddyserver/transform-encoder `
