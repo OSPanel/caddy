@@ -179,7 +179,6 @@ jobs:
             --with github.com/neodyme-labs/influx_log `
             --with github.com/o1egl/paseto/v2 `
             --with github.com/okrc/caddy-uploadcert-tencentcloud `
-            --with github.com/oltdaniel/caddy-ipinfo-free `
             --with github.com/oltdaniel/caddy-storage-valkey `
             --with github.com/pberkel/caddy-storage-redis `
             --with github.com/porech/caddy-maxmind-geolocation `
@@ -205,7 +204,6 @@ jobs:
             --with github.com/steffenbusch/caddy-jwt-issuer `
             --with github.com/steffenbusch/caddy-placeholder-dump `
             --with github.com/steffenbusch/caddy-postauth-2fa `
-            --with github.com/teler-sh/teler-caddy `
             --with github.com/teodorescuserban/caddy-argsort `
             --with github.com/teodorescuserban/caddy-cookieflag `
             --with github.com/teodorescuserban/caddy-ip-map `
@@ -223,7 +221,6 @@ jobs:
             --with github.com/ysicing/caddy2-geocn `
             --with github.com/z3ntl3/caddyguard `
             --with github.com/zhangjiayin/caddy-geoip2 `
-            --with github.com/zhangjiayin/caddy-mysql-adapter `
             --with go.hackfix.me/caddy-paseto `
             --with pkg.jsn.cam/caddy-defender `
             --with willnorris.com/go/imageproxy/caddy `      
