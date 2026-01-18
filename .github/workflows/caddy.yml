@@ -179,7 +179,6 @@ jobs:
             --with github.com/kadeessh/kadeessh `
             --with github.com/kassner/caddy-trapdoor `
             --with github.com/kirsch33/realip `
-            --with github.com/kitche/caddy-modsecurity `
             --with github.com/lanrat/caddy-dynamic-remoteip `
             --with github.com/lindenlab/caddy-s3-proxy `
             --with github.com/mastercactapus/caddy2-proxyprotocol `
@@ -228,7 +227,6 @@ jobs:
             --with github.com/sil-org/certmagic-storage-dynamodb/v3 `
             --with github.com/sjtug/caddy2-filter `
             --with github.com/sjtug/cerberus `
-            --with github.com/ss098/certmagic-s3 `
             --with github.com/steffenbusch/caddy-basicauth-totp `
             --with github.com/steffenbusch/caddy-bot-barrier `
             --with github.com/steffenbusch/caddy-cron-matcher `
