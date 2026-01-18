@@ -78,7 +78,6 @@ jobs:
             --with github.com/caddy-dns/easydns `
             --with github.com/caddy-dns/gandi `
             --with github.com/caddy-dns/glesys `
-            --with github.com/caddy-dns/godaddy `
             --with github.com/caddy-dns/googleclouddns `
             --with github.com/caddy-dns/he `
             --with github.com/caddy-dns/hetzner `
@@ -213,7 +212,6 @@ jobs:
             --with github.com/ueffel/caddy-brotli `
             --with github.com/ueffel/caddy-imagefilter/v2/defaults `
             --with github.com/ueffel/caddy-tls-format `
-            --with github.com/xcaddyplugins/caddy-dns-godaddy `
             --with github.com/xcaddyplugins/caddy-trusted-cloudfront `
             --with github.com/xcaddyplugins/caddy-trusted-gcp-cloudcdn `
             --with github.com/ybizeul/caddy-logger-graphite `
