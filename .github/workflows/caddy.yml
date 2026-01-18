@@ -179,7 +179,6 @@ jobs:
             --with github.com/kassner/caddy-trapdoor `
             --with github.com/kirsch33/realip `
             --with github.com/kitche/caddy-modsecurity `
-            --with github.com/kmpm/caddy-events-nats `
             --with github.com/lanrat/caddy-dynamic-remoteip `
             --with github.com/lindenlab/caddy-s3-proxy `
             --with github.com/magnax.ca/caddy/gopkg `
