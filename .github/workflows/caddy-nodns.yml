@@ -1,6 +1,9 @@
-name: Build Custom Caddy (no DNS)
+name: Build Custom Caddy (Windows)
 
 on:
+  push:
+    paths: 
+       - ".github/workflows/**"
   workflow_dispatch:
     inputs:
       caddy_version:
@@ -117,6 +120,7 @@ jobs:
             --with github.com/kassner/caddy-trapdoor `
             --with github.com/kirsch33/realip `
             --with github.com/lanrat/caddy-dynamic-remoteip `
+            --with github.com/lindenlab/caddy-s3-proxy `
             --with github.com/mentimeter/caddy-storage-cf-kv `
             --with github.com/mholt/caddy-dynamicdns `
             --with github.com/mholt/caddy-events-exec `
@@ -148,9 +152,11 @@ jobs:
             --with github.com/pteich/caddy-tlsconsul `
             --with github.com/quix-labs/caddy-pfx-certificates `
             --with github.com/sablierapp/sablier-caddy-plugin `
+            --with github.com/sagikazarmark/caddy-fs-s3 `
             --with github.com/sandstorm/caddy-nats-bridge `
             --with github.com/sebdroid/cookiecrypt `
             --with github.com/shift72/caddy-geo-ip `
+            --with github.com/sil-org/certmagic-storage-dynamodb/v3 `
             --with github.com/sjtug/caddy2-filter `
             --with github.com/sjtug/cerberus `
             --with github.com/steffenbusch/caddy-basicauth-totp `
@@ -164,6 +170,7 @@ jobs:
             --with github.com/teodorescuserban/caddy-cookieflag `
             --with github.com/teodorescuserban/caddy-ip-map `
             --with github.com/thestaticturtle/caddy-client-tls-ldap-validator `
+            --with github.com/techknowlogick/certmagic-s3 `
             --with github.com/tuzzmaniandevil/caddy-dynamic-clientip `
             --with github.com/ueffel/caddy-basic-auth-filter `
             --with github.com/ueffel/caddy-brotli `
@@ -186,4 +193,11 @@ jobs:
           name: caddy-${{ steps.get_version.outputs.tag }}
           path: ./caddy.exe
 
-  
+      # 6. Создание релиза
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.get_version.outputs.tag }}
+          name: "Release ${{ steps.get_version.outputs.tag }}"
+          body: "Custom Caddy build with modules. Version: ${{ steps.get_version.outputs.tag }}"
+          files: ./caddy.exe
