@@ -244,7 +244,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.inputs.caddy_version }}
-          name: "Custom Caddy (Windows) ${{ github.event.inputs.caddy_version }}"
+          name: "Caddy (Windows) ${{ github.event.inputs.caddy_version }}"
           files: ./dist/caddy.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
