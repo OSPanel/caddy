@@ -21,11 +21,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Prepare Git identity (anonymous)
+        shell: pwsh
         run: |
-          NAME="${{ github.actor }}"
-          EMAIL="${{ github.actor }}@users.noreply.github.com"
-          echo "BUILD_USER_NAME=$NAME"  >> $GITHUB_ENV
-          echo "BUILD_USER_EMAIL=$EMAIL" >> $GITHUB_ENV
+          $env:NAME = "${{ github.actor }}"
+          $env:EMAIL = "${{ github.actor }}@users.noreply.github.com"
+          Add-Content -Path $env:GITHUB_ENV -Value "BUILD_USER_NAME=$($env:NAME)"
+          Add-Content -Path $env:GITHUB_ENV -Value "BUILD_USER_EMAIL=$($env:EMAIL)"
 
       # 2. Установка Go
       - name: Setup Go
