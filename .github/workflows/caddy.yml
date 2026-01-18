@@ -113,7 +113,6 @@ jobs:
             --with github.com/casbin/caddy-authz/v2 `
             --with github.com/chris-swift-dev/caddy-fail2ban `
             --with github.com/chukmunnlee/caddy-openapi `
-            --with github.com/circa10a/caddy-geofence `
             --with github.com/corazawaf/coraza-caddy/v2 `
             --with github.com/davidventura/caddy-certsrv `
             --with github.com/deanchou/caddy_etcd `
