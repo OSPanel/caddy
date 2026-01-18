@@ -20,6 +20,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Prepare Git identity (anonymous)
+        run: |
+          NAME="${{ github.actor }}"
+          EMAIL="${{ github.actor }}@users.noreply.github.com"
+          echo "BUILD_USER_NAME=$NAME"  >> $GITHUB_ENV
+          echo "BUILD_USER_EMAIL=$EMAIL" >> $GITHUB_ENV
+
       # 2. Установка Go
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -224,26 +231,23 @@ jobs:
       - name: Upload Caddy binary
         uses: actions/upload-artifact@v4
         with:
-          name: caddy-custom-windows
+          name: caddy-${{ github.event.inputs.caddy_version }}
           path: ./caddy.exe
 
-  release:
-    runs-on: windows-latest
-    needs: build
+      - name: Generate release tag
+        id: gen_tag
+        shell: pwsh
+        run: |
+          echo "tag=${{ github.event.inputs.caddy_version }}" >> $env:GITHUB_OUTPUT
 
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: caddy-custom-windows
-          path: ./dist
-
-      # 6. Создание релиза
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.event.inputs.caddy_version }}
-          name: "Caddy (Windows) ${{ github.event.inputs.caddy_version }}"
-          files: ./dist/caddy.exe
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ steps.gen_tag.outputs.tag }}
+          body: "Release ${{ github.event.inputs.caddy_version }}"
+          files: ./caddy.exe
+
+      - name: Cleanup
+        shell: pwsh
+        run: Remove-Item ./caddy.exe -Force
+
