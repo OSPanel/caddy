@@ -58,7 +58,6 @@ jobs:
             --with github.com/abiosoft/caddy-json-parse `
             --with github.com/abiosoft/caddy-json-schema `
             --with github.com/abiosoft/caddy-named-routes `
-            --with github.com/abiosoft/caddy-yaml `
             --with github.com/aksdb/caddy-cgi/v2 `
             --with github.com/anthemaker/caddy-dns-fetcher `
             --with github.com/anthemaker/caddy-signed-urls `
