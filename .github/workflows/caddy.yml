@@ -11,6 +11,9 @@ on:
         required: true
         default: "v2.10.2"
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: windows-latest
@@ -19,6 +22,29 @@ jobs:
       # 1. Checkout репозиторий
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # 1.1. Определение версии (логика: input -> default)
+      - name: Determine Version
+        id: get_version
+        shell: pwsh
+        run: |
+          # Укажите здесь версию по умолчанию, которая будет использоваться при push
+          $default_ver = "v2.10.2"
+          
+          # Берем версию из ввода пользователя
+          $input_ver = "${{ github.event.inputs.caddy_version }}"
+          
+          # Если запуск по push (input пустой), используем default
+          if ([string]::IsNullOrWhiteSpace($input_ver)) {
+              $final_ver = $default_ver
+              Write-Host "Triggered by push. Using default version: $final_ver"
+          } else {
+              $final_ver = $input_ver
+              Write-Host "Triggered manually. Using input version: $final_ver"
+          }
+          
+          # Сохраняем результат для следующих шагов
+          echo "tag=$final_ver" >> $env:GITHUB_OUTPUT
 
       # 2. Установка Go
       - name: Setup Go
@@ -223,23 +249,14 @@ jobs:
       - name: Upload Caddy binary
         uses: actions/upload-artifact@v4
         with:
-          name: caddy-${{ github.event.inputs.caddy_version }}
+          name: caddy-${{ steps.get_version.outputs.tag }}
           path: ./caddy.exe
 
-      - name: Generate release tag
-        id: gen_tag
-        shell: pwsh
-        run: |
-          $now = Get-Date -Format "yy.M.d.H"
-          echo "tag=v$now" >> $env:GITHUB_OUTPUT
-
+      # 6. Создание релиза
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.event.inputs.caddy_version }}
-          body: "Release Caddy ${{ github.event.inputs.caddy_version }}"
-          files: ./*.exe
-
-      - name: Clean up release folder
-        run: |
-          Remove-Item ./ -Recurse -Force
+          tag_name: ${{ steps.get_version.outputs.tag }}
+          name: "Release ${{ steps.get_version.outputs.tag }}"
+          body: "Custom Caddy build with modules. Version: ${{ steps.get_version.outputs.tag }}"
+          files: ./caddy.exe
