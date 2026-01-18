@@ -1,4 +1,4 @@
-name: Build Custom Caddy (Windows)
+name: Build Custom Caddy (no-DNS)
 
 on:
   push:
