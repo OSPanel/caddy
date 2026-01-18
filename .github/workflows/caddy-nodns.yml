@@ -61,16 +61,13 @@ jobs:
         shell: pwsh
         run: |
           xcaddy build ${{ github.event.inputs.caddy_version }} `
-            --with github.com/AnswerDotAI/caddy-sqlite-router `
             --with github.com/BadAimWeeb/caddy-uwsgi-transport `
             --with github.com/Elegant996/scgi-transport `
             --with github.com/HeavyHorst/certmagic-nats `
             --with github.com/LeenHawk/caddy-edgeone-ip `
             --with github.com/LeenHawk/edgeone `
-            --with github.com/PixyBlue/caddy-pixbooster `
             --with github.com/Scarsz/caddy-save `
             --with github.com/WeidiDeng/caddy-cloudflare-ip `
-            --with github.com/WingLim/caddy-webhook `
             --with github.com/abiosoft/caddy-exec `
             --with github.com/abiosoft/caddy-hmac `
             --with github.com/abiosoft/caddy-inspect `
@@ -120,7 +117,6 @@ jobs:
             --with github.com/imgk/caddy-trojan `
             --with github.com/immosquare/caddy-dns-immosquare `
             --with github.com/infogulch/xtemplate `
-            --with github.com/jaredfolkins/llmon `
             --with github.com/jonaharagon/caddy-umami `
             --with github.com/jpillora/ipfilter-caddy `
             --with github.com/kassner/caddy-trapdoor `
@@ -161,7 +157,6 @@ jobs:
             --with github.com/quix-labs/caddy-pfx-certificates `
             --with github.com/sablierapp/sablier-caddy-plugin `
             --with github.com/sagikazarmark/caddy-fs-s3 `
-            --with github.com/sagikazarmark/caddy-k8s-admission `
             --with github.com/sandstorm/caddy-nats-bridge `
             --with github.com/sebdroid/cookiecrypt `
             --with github.com/shift72/caddy-geo-ip `
