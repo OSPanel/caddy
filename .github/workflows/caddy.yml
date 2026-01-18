@@ -48,7 +48,6 @@ jobs:
             --with github.com/LeenHawk/edgeone `
             --with github.com/Lenart12/caddy-events-store_cert `
             --with github.com/PixyBlue/caddy-pixbooster `
-            --with github.com/RussellLuo/caddy-ext/flagr `
             --with github.com/RussellLuo/caddy-ext/ratelimit `
             --with github.com/RussellLuo/caddy-ext/requestbodyvar `
             --with github.com/Scarsz/caddy-save `
