@@ -64,18 +64,14 @@ jobs:
         shell: pwsh
         run: |
           xcaddy build ${{ github.event.inputs.caddy_version }} `
-            --with github.com/AnswerDotAI/caddy-sqlite-router `
             --with github.com/BadAimWeeb/caddy-uwsgi-transport `
             --with github.com/Elegant996/scgi-transport `
             --with github.com/Enzonix-LLC/dns-caddy `
             --with github.com/HeavyHorst/certmagic-nats `
             --with github.com/LeenHawk/caddy-edgeone-ip `
             --with github.com/LeenHawk/edgeone `
-            --with github.com/Lenart12/caddy-events-store_cert `
-            --with github.com/PixyBlue/caddy-pixbooster `
             --with github.com/Scarsz/caddy-save `
             --with github.com/WeidiDeng/caddy-cloudflare-ip `
-            --with github.com/WingLim/caddy-webhook `
             --with github.com/abiosoft/caddy-exec `
             --with github.com/abiosoft/caddy-hmac `
             --with github.com/abiosoft/caddy-inspect `
@@ -138,10 +134,7 @@ jobs:
             --with github.com/caddyserver/transform-encoder `
             --with github.com/casbin/caddy-authz/v2 `
             --with github.com/chris-swift-dev/caddy-fail2ban `
-            --with github.com/chukmunnlee/caddy-openapi `
             --with github.com/corazawaf/coraza-caddy/v2 `
-            --with github.com/davidventura/caddy-certsrv `
-            --with github.com/deanchou/caddy_etcd `
             --with github.com/deanchou/caddy_ip_filter `
             --with github.com/devetek/caddyserver-minifier `
             --with github.com/digilolnet/caddy-bunny-ip `
@@ -159,17 +152,14 @@ jobs:
             --with github.com/ggicci/caddy-jwt `
             --with github.com/git001/caddyv2-upload `
             --with github.com/gonevo/caddy-tls-file-manager `
-            --with github.com/grafana/certmagic-gcs `
             --with github.com/gr33nbl00d/caddy-revocation-validator `
             --with github.com/greenpau/caddy-git `
             --with github.com/greenpau/caddy-lambda `
             --with github.com/greenpau/caddy-security `
             --with github.com/greenpau/caddy-trace `
             --with github.com/hslatman/caddy-openapi-validator `
-            --with github.com/imgk/caddy-trojan `
             --with github.com/immosquare/caddy-dns-immosquare `
             --with github.com/infogulch/xtemplate `
-            --with github.com/jaredfolkins/llmon `
             --with github.com/jonaharagon/caddy-umami `
             --with github.com/jpillora/ipfilter-caddy `
             --with github.com/kassner/caddy-trapdoor `
@@ -186,7 +176,6 @@ jobs:
             --with github.com/mkalus/caddy_block_aws `
             --with github.com/mkalus/caddy_nobots_v2 `
             --with github.com/mohammed90/caddy-aws-transport `
-            --with github.com/mohammed90/caddy-encrypted-storage `
             --with github.com/mohammed90/caddy-git-fs `
             --with github.com/mohammed90/caddy-ngrok-listener `
             --with github.com/mohammed90/caddy-pocketbase `
@@ -205,12 +194,10 @@ jobs:
             --with github.com/oltdaniel/caddy-storage-valkey `
             --with github.com/pberkel/caddy-storage-redis `
             --with github.com/porech/caddy-maxmind-geolocation `
-            --with github.com/protomaps/go-pmtiles/caddy `
             --with github.com/pteich/caddy-tlsconsul `
             --with github.com/quix-labs/caddy-pfx-certificates `
             --with github.com/sablierapp/sablier-caddy-plugin `
             --with github.com/sagikazarmark/caddy-fs-s3 `
-            --with github.com/sagikazarmark/caddy-k8s-admission `
             --with github.com/sandstorm/caddy-nats-bridge `
             --with github.com/sebdroid/cookiecrypt `
             --with github.com/shift72/caddy-geo-ip `
@@ -220,7 +207,6 @@ jobs:
             --with github.com/steffenbusch/caddy-basicauth-totp `
             --with github.com/steffenbusch/caddy-bot-barrier `
             --with github.com/steffenbusch/caddy-cron-matcher `
-            --with github.com/steffenbusch/caddy-extra-placeholders `
             --with github.com/steffenbusch/caddy-i18n-template-ext `
             --with github.com/steffenbusch/caddy-jwt-issuer `
             --with github.com/steffenbusch/caddy-placeholder-dump `
