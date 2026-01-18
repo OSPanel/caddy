@@ -143,7 +143,6 @@ jobs:
             --with github.com/devetek/caddyserver-minifier `
             --with github.com/digilolnet/caddy-bunny-ip `
             --with github.com/dulli/caddy-wol `
-            --with github.com/dunglas/caddy `
             --with github.com/dunglas/caddy-cbrotli `
             --with github.com/dunglas/mercure/caddy `
             --with github.com/dunglas/vulcain/caddy `
