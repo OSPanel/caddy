@@ -40,7 +40,6 @@ jobs:
           xcaddy build ${{ github.event.inputs.caddy_version }} `
             --with github.com/AnswerDotAI/caddy-sqlite-router `
             --with github.com/BadAimWeeb/caddy-uwsgi-transport `
-            --with github.com/BraveRoy/caddy-waf `
             --with github.com/Elegant996/scgi-transport `
             --with github.com/Enzonix-LLC/dns-caddy `
             --with github.com/HeavyHorst/certmagic-nats `
