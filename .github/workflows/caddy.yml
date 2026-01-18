@@ -20,14 +20,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Prepare Git identity (anonymous)
-        shell: pwsh
-        run: |
-          $env:NAME = "${{ github.actor }}"
-          $env:EMAIL = "${{ github.actor }}@users.noreply.github.com"
-          Add-Content -Path $env:GITHUB_ENV -Value "BUILD_USER_NAME=$($env:NAME)"
-          Add-Content -Path $env:GITHUB_ENV -Value "BUILD_USER_EMAIL=$($env:EMAIL)"
-
       # 2. Установка Go
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -235,15 +227,20 @@ jobs:
           name: caddy-${{ github.event.inputs.caddy_version }}
           path: ./caddy.exe
 
-      # 6. Создание GitHub Release
+      - name: Generate release tag
+        id: gen_tag
+        shell: pwsh
+        run: |
+          $now = Get-Date -Format "yy.M.d.H"
+          echo "tag=v$now" >> $env:GITHUB_OUTPUT
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.event.inputs.caddy_version }}
-          body: "Release ${{ github.event.inputs.caddy_version }}"
-          files: ./caddy.exe
+          body: "Release Caddy ${{ github.event.inputs.caddy_version }}"
+          files: ./*.exe
 
-      # 7. Очистка
-      - name: Cleanup
-        shell: pwsh
-        run: Remove-Item ./caddy.exe -Force
+      - name: Clean up release folder
+        run: |
+          Remove-Item ./ -Recurse -Force
