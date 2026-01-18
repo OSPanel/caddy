@@ -181,7 +181,6 @@ jobs:
             --with github.com/kitche/caddy-modsecurity `
             --with github.com/lanrat/caddy-dynamic-remoteip `
             --with github.com/lindenlab/caddy-s3-proxy `
-            --with github.com/magnax.ca/caddy/gopkg `
             --with github.com/mastercactapus/caddy2-proxyprotocol `
             --with github.com/mentimeter/caddy-storage-cf-kv `
             --with github.com/mholt/caddy-dynamicdns `
