@@ -188,7 +188,6 @@ jobs:
             --with github.com/sandstorm/caddy-nats-bridge `
             --with github.com/sebdroid/cookiecrypt `
             --with github.com/shift72/caddy-geo-ip `
-            --with github.com/sillygod/cdp-cache `
             --with github.com/sil-org/certmagic-storage-dynamodb/v3 `
             --with github.com/sjtug/caddy2-filter `
             --with github.com/sjtug/cerberus `
