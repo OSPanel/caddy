@@ -219,11 +219,4 @@ jobs:
           name: caddy-${{ steps.get_version.outputs.tag }}
           path: ./caddy.exe
 
-      # 6. Создание релиза
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ steps.get_version.outputs.tag }}
-          name: "Release ${{ steps.get_version.outputs.tag }}"
-          body: "Custom Caddy build with modules. Version: ${{ steps.get_version.outputs.tag }}"
-          files: ./caddy.exe
+     
