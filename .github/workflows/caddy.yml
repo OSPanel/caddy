@@ -68,7 +68,6 @@ jobs:
             --with github.com/Elegant996/scgi-transport `
             --with github.com/HeavyHorst/certmagic-nats `
             --with github.com/LeenHawk/caddy-edgeone-ip `
-            --with github.com/LeenHawk/edgeone `
             --with github.com/Scarsz/caddy-save `
             --with github.com/WeidiDeng/caddy-cloudflare-ip `
             --with github.com/abiosoft/caddy-exec `
@@ -84,7 +83,6 @@ jobs:
             --with github.com/bploetz/caddy-oauth2-token-introspection `
             --with github.com/caddy-dns/acmedns `
             --with github.com/caddy-dns/acmeproxy `
-            --with github.com/caddy-dns/alidns `
             --with github.com/caddy-dns/azure `
             --with github.com/caddy-dns/bluecat `
             --with github.com/caddy-dns/bunny `
@@ -108,7 +106,6 @@ jobs:
             --with github.com/caddy-dns/inwx `
             --with github.com/caddy-dns/linode `
             --with github.com/caddy-dns/loopia `
-            --with github.com/caddy-dns/mailinabox `
             --with github.com/caddy-dns/metaname `
             --with github.com/caddy-dns/namecheap `
             --with github.com/caddy-dns/nanelo `
@@ -117,7 +114,6 @@ jobs:
             --with github.com/caddy-dns/njalla `
             --with github.com/caddy-dns/ovh `
             --with github.com/caddy-dns/porkbun `
-            --with github.com/caddy-dns/powerdns `
             --with github.com/caddy-dns/rfc2136 `
             --with github.com/caddy-dns/route53 `
             --with github.com/caddy-dns/scaleway `
@@ -164,7 +160,6 @@ jobs:
             --with github.com/kassner/caddy-trapdoor `
             --with github.com/kirsch33/realip `
             --with github.com/lanrat/caddy-dynamic-remoteip `
-            --with github.com/lindenlab/caddy-s3-proxy `
             --with github.com/mentimeter/caddy-storage-cf-kv `
             --with github.com/mholt/caddy-dynamicdns `
             --with github.com/mholt/caddy-events-exec `
@@ -200,7 +195,6 @@ jobs:
             --with github.com/sandstorm/caddy-nats-bridge `
             --with github.com/sebdroid/cookiecrypt `
             --with github.com/shift72/caddy-geo-ip `
-            --with github.com/sil-org/certmagic-storage-dynamodb/v3 `
             --with github.com/sjtug/caddy2-filter `
             --with github.com/sjtug/cerberus `
             --with github.com/steffenbusch/caddy-basicauth-totp `
@@ -214,7 +208,6 @@ jobs:
             --with github.com/teodorescuserban/caddy-cookieflag `
             --with github.com/teodorescuserban/caddy-ip-map `
             --with github.com/thestaticturtle/caddy-client-tls-ldap-validator `
-            --with github.com/techknowlogick/certmagic-s3 `
             --with github.com/tuzzmaniandevil/caddy-dynamic-clientip `
             --with github.com/ueffel/caddy-basic-auth-filter `
             --with github.com/ueffel/caddy-brotli `
