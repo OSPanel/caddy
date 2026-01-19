@@ -149,6 +149,7 @@ jobs:
             --with github.com/greenpau/caddy-trace `
             --with github.com/hslatman/caddy-openapi-validator `
             --with github.com/infogulch/xtemplate `
+            --with github.com/mohammed90/caddy-encrypted-storage `
             --with github.com/jonaharagon/caddy-umami `
             --with github.com/jpillora/ipfilter-caddy `
             --with github.com/kassner/caddy-trapdoor `
@@ -174,8 +175,6 @@ jobs:
             --with github.com/muety/caddy-plausible-plugin `
             --with github.com/muety/caddy-remote-host `
             --with github.com/o1egl/paseto/v2 `
-            --with github.com/okrc/caddy-uploadcert-tencentcloud `
-            --with github.com/oltdaniel/caddy-storage-valkey `
             --with github.com/pberkel/caddy-storage-redis `
             --with github.com/pteich/caddy-tlsconsul `
             --with github.com/quix-labs/caddy-pfx-certificates `
