@@ -118,7 +118,6 @@ jobs:
             --with github.com/caddy-dns/tencentcloud `
             --with github.com/caddy-dns/transip `
             --with github.com/caddy-dns/vultr `
-            --with github.com/caddy-dns/ionos `
             --with github.com/caddyserver/cache-handler `
             --with github.com/caddyserver/forwardproxy `
             --with github.com/caddyserver/ntlm-transport `
@@ -155,7 +154,6 @@ jobs:
             --with github.com/kassner/caddy-trapdoor `
             --with github.com/kirsch33/realip `
             --with github.com/lanrat/caddy-dynamic-remoteip `
-            --with github.com/mentimeter/caddy-storage-cf-kv `
             --with github.com/mholt/caddy-dynamicdns `
             --with github.com/mholt/caddy-events-exec `
             --with github.com/mholt/caddy-grpc-web `
@@ -179,7 +177,6 @@ jobs:
             --with github.com/okrc/caddy-uploadcert-tencentcloud `
             --with github.com/oltdaniel/caddy-storage-valkey `
             --with github.com/pberkel/caddy-storage-redis `
-            --with github.com/porech/caddy-maxmind-geolocation `
             --with github.com/pteich/caddy-tlsconsul `
             --with github.com/quix-labs/caddy-pfx-certificates `
             --with github.com/sablierapp/sablier-caddy-plugin `
@@ -208,7 +205,6 @@ jobs:
             --with github.com/xcaddyplugins/caddy-trusted-cloudfront `
             --with github.com/xcaddyplugins/caddy-trusted-gcp-cloudcdn `
             --with github.com/ybizeul/caddy-logger-graphite `
-            --with github.com/ysicing/caddy2-geocn `
             --with github.com/z3ntl3/caddyguard `
             --with github.com/zhangjiayin/caddy-geoip2 `
             --with go.hackfix.me/caddy-paseto `
