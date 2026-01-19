@@ -209,18 +209,29 @@ jobs:
             --with pkg.jsn.cam/caddy-defender `
             --with willnorris.com/go/imageproxy/caddy `      
 
-      # 5. Сохранение артефакта
-      - name: Upload Caddy binary
+      - name: Pack release (zip)
+        shell: pwsh
+        run: |
+          $ver = "${{ steps.get_version.outputs.tag }}"
+          $zip = "caddy-$ver-windows-amd64.zip"
+
+          if (Test-Path $zip) { Remove-Item $zip -Force }
+          if (!(Test-Path ".\caddy.exe")) { throw "caddy.exe not found" }
+
+          Compress-Archive -Path ".\caddy.exe" -DestinationPath $zip -Force
+          "zip_name=$zip" >> $env:GITHUB_OUTPUT
+        id: pack
+
+      - name: Upload artifact (zip)
         uses: actions/upload-artifact@v4
         with:
-          name: caddy-${{ steps.get_version.outputs.tag }}
-          path: ./caddy.exe
+          name: caddy-${{ steps.get_version.outputs.tag }}-windows-amd64
+          path: ./${{ steps.pack.outputs.zip_name }}
 
-      # 6. Создание релиза
-      - name: Create GitHub Release
+      - name: Create GitHub Release (zip)
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.get_version.outputs.tag }}
           name: "Release ${{ steps.get_version.outputs.tag }}"
           body: "Custom Caddy build with modules. Version: ${{ steps.get_version.outputs.tag }}"
-          files: ./caddy.exe
+          files: ./${{ steps.pack.outputs.zip_name }}
