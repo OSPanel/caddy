@@ -107,7 +107,6 @@ jobs:
             --with github.com/caddy-dns/loopia `
             --with github.com/caddy-dns/metaname `
             --with github.com/caddy-dns/namecheap `
-            --with github.com/caddy-dns/nanelo `
             --with github.com/caddy-dns/netcup `
             --with github.com/caddy-dns/netlify `
             --with github.com/caddy-dns/njalla `
