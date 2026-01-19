@@ -93,7 +93,6 @@ jobs:
             --with github.com/caddy-dns/dnsimple `
             --with github.com/caddy-dns/duckdns `
             --with github.com/caddy-dns/dynu `
-            --with github.com/caddy-dns/easydns `
             --with github.com/caddy-dns/gandi `
             --with github.com/caddy-dns/glesys `
             --with github.com/caddy-dns/googleclouddns `
@@ -146,7 +145,6 @@ jobs:
             --with github.com/git001/caddyv2-upload `
             --with github.com/gonevo/caddy-tls-file-manager `
             --with github.com/gr33nbl00d/caddy-revocation-validator `
-            --with github.com/greenpau/caddy-git `
             --with github.com/greenpau/caddy-lambda `
             --with github.com/greenpau/caddy-security `
             --with github.com/greenpau/caddy-trace `
@@ -178,7 +176,6 @@ jobs:
             --with github.com/mpilhlt/caddy-conneg `
             --with github.com/muety/caddy-plausible-plugin `
             --with github.com/muety/caddy-remote-host `
-            --with github.com/neodyme-labs/influx_log `
             --with github.com/o1egl/paseto/v2 `
             --with github.com/okrc/caddy-uploadcert-tencentcloud `
             --with github.com/oltdaniel/caddy-storage-valkey `
