@@ -1,4 +1,4 @@
-name: Build Custom Caddy (no-DNS)
+name: Build Custom Caddy (noXT)
 
 on:
   workflow_dispatch:
@@ -65,7 +65,6 @@ jobs:
             --with github.com/Elegant996/scgi-transport `
             --with github.com/HeavyHorst/certmagic-nats `
             --with github.com/LeenHawk/caddy-edgeone-ip `
-            --with github.com/LeenHawk/edgeone `
             --with github.com/Scarsz/caddy-save `
             --with github.com/WeidiDeng/caddy-cloudflare-ip `
             --with github.com/abiosoft/caddy-exec `
@@ -79,6 +78,44 @@ jobs:
             --with github.com/argami/redir-dns `
             --with github.com/baldinof/caddy-supervisor `
             --with github.com/bploetz/caddy-oauth2-token-introspection `
+            --with github.com/caddy-dns/acmedns `
+            --with github.com/caddy-dns/acmeproxy `
+            --with github.com/caddy-dns/azure `
+            --with github.com/caddy-dns/bluecat `
+            --with github.com/caddy-dns/bunny `
+            --with github.com/caddy-dns/cloudflare `
+            --with github.com/caddy-dns/cloudns `
+            --with github.com/caddy-dns/desec `
+            --with github.com/caddy-dns/digitalocean `
+            --with github.com/caddy-dns/dnsimple `
+            --with github.com/caddy-dns/duckdns `
+            --with github.com/caddy-dns/dynu `
+            --with github.com/caddy-dns/gandi `
+            --with github.com/caddy-dns/glesys `
+            --with github.com/caddy-dns/googleclouddns `
+            --with github.com/caddy-dns/he `
+            --with github.com/caddy-dns/hetzner `
+            --with github.com/caddy-dns/huaweicloud `
+            --with github.com/caddy-dns/infomaniak `
+            --with github.com/caddy-dns/ionos `
+            --with github.com/caddy-dns/inwx `
+            --with github.com/caddy-dns/linode `
+            --with github.com/caddy-dns/loopia `
+            --with github.com/caddy-dns/metaname `
+            --with github.com/caddy-dns/namecheap `
+            --with github.com/caddy-dns/netcup `
+            --with github.com/caddy-dns/netlify `
+            --with github.com/caddy-dns/njalla `
+            --with github.com/caddy-dns/ovh `
+            --with github.com/caddy-dns/porkbun `
+            --with github.com/caddy-dns/rfc2136 `
+            --with github.com/caddy-dns/route53 `
+            --with github.com/caddy-dns/scaleway `
+            --with github.com/caddy-dns/spaceship `
+            --with github.com/caddy-dns/tencentcloud `
+            --with github.com/caddy-dns/transip `
+            --with github.com/caddy-dns/vultr `
+            --with github.com/caddy-dns/ionos `
             --with github.com/caddyserver/cache-handler `
             --with github.com/caddyserver/forwardproxy `
             --with github.com/caddyserver/ntlm-transport `
@@ -105,13 +142,11 @@ jobs:
             --with github.com/git001/caddyv2-upload `
             --with github.com/gonevo/caddy-tls-file-manager `
             --with github.com/gr33nbl00d/caddy-revocation-validator `
-            --with github.com/greenpau/caddy-git `
             --with github.com/greenpau/caddy-lambda `
             --with github.com/greenpau/caddy-security `
             --with github.com/greenpau/caddy-trace `
             --with github.com/hslatman/caddy-openapi-validator `
             --with github.com/immosquare/caddy-dns-immosquare `
-            --with github.com/infogulch/xtemplate `
             --with github.com/jonaharagon/caddy-umami `
             --with github.com/jpillora/ipfilter-caddy `
             --with github.com/kassner/caddy-trapdoor `
@@ -124,9 +159,7 @@ jobs:
             --with github.com/mholt/caddy-l4 `
             --with github.com/mholt/caddy-ratelimit `
             --with github.com/mholt/caddy-webdav `
-            --with github.com/mkalus/caddy_block_aws `
             --with github.com/mkalus/caddy_nobots_v2 `
-            --with github.com/mohammed90/caddy-aws-transport `
             --with github.com/mohammed90/caddy-git-fs `
             --with github.com/mohammed90/caddy-ngrok-listener `
             --with github.com/mohammed90/caddy-pocketbase `
@@ -139,7 +172,6 @@ jobs:
             --with github.com/mpilhlt/caddy-conneg `
             --with github.com/muety/caddy-plausible-plugin `
             --with github.com/muety/caddy-remote-host `
-            --with github.com/neodyme-labs/influx_log `
             --with github.com/o1egl/paseto/v2 `
             --with github.com/okrc/caddy-uploadcert-tencentcloud `
             --with github.com/oltdaniel/caddy-storage-valkey `
@@ -148,6 +180,7 @@ jobs:
             --with github.com/pteich/caddy-tlsconsul `
             --with github.com/quix-labs/caddy-pfx-certificates `
             --with github.com/sablierapp/sablier-caddy-plugin `
+            --with github.com/sagikazarmark/caddy-fs-s3 `
             --with github.com/sandstorm/caddy-nats-bridge `
             --with github.com/sebdroid/cookiecrypt `
             --with github.com/shift72/caddy-geo-ip `
