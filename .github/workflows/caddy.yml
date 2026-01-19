@@ -91,7 +91,6 @@ jobs:
             --with github.com/caddy-dns/desec `
             --with github.com/caddy-dns/digitalocean `
             --with github.com/caddy-dns/dnsimple `
-            --with github.com/caddy-dns/domainnameshop `
             --with github.com/caddy-dns/duckdns `
             --with github.com/caddy-dns/dynu `
             --with github.com/caddy-dns/easydns `
