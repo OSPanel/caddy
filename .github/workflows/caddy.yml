@@ -207,7 +207,7 @@ jobs:
             --with github.com/zhangjiayin/caddy-geoip2 `
             --with go.hackfix.me/caddy-paseto `
             --with pkg.jsn.cam/caddy-defender `
-            --with willnorris.com/go/imageproxy/caddy `      
+            --with willnorris.com/go/imageproxy/caddy `
 
       - name: Pack release (zip)
         shell: pwsh
