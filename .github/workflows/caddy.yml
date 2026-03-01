@@ -9,7 +9,7 @@ on:
       caddy_version:
         description: "Версия Caddy (например, v2.8.4)"
         required: true
-        default: "v2.10.2"
+        default: "v2.11.1"
 
 permissions:
   contents: write
@@ -29,7 +29,7 @@ jobs:
         shell: pwsh
         run: |
           # Укажите здесь версию по умолчанию, которая будет использоваться при push
-          $default_ver = "v2.10.2"
+          $default_ver = "v2.11.1"
           
           # Берем версию из ввода пользователя
           $input_ver = "${{ github.event.inputs.caddy_version }}"
@@ -50,7 +50,7 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: "1.25.6"
+          go-version: "1.26.0"
 
       # 3. Установка xcaddy
       - name: Install xcaddy
