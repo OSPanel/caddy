@@ -21,7 +21,7 @@ jobs:
     steps:
       # 1. Checkout репозиторий
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # 1.1. Определение версии (логика: input -> default)
       - name: Determine Version
@@ -223,7 +223,7 @@ jobs:
         id: pack
 
       - name: Upload artifact (zip)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: caddy-${{ steps.get_version.outputs.tag }}-windows-amd64
           path: ./${{ steps.pack.outputs.zip_name }}
